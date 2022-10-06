@@ -1,4 +1,4 @@
-package java001_basic.prob;
+package java001_basic.answ;
 
 /*
  *평년,윤년을 구하는 프로그램을 구현하시오.
@@ -17,13 +17,9 @@ public class Prob04 {
 		int year=2012;
 		
 		//여기에 작성하시오.
-		int res = (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0) ? 1 : 0;
-		
-		if(res == 1) {
-			System.out.printf("%d년도는 윤년입니다.", year);
-		} else {
-			System.out.printf("%d년도는 평년입니다.", year);
-		}
+		boolean  leapYearCheck = (year % 4 == 0 && year % 100 != 0) || (year%400 == 0);
+		String yearData = leapYearCheck ? "윤년" : "평년";
+		System.out.printf("%d년도는 %s입니다.\n", year, yearData);
 	}
 
 }

@@ -1,4 +1,4 @@
-package java001_basic.prob;
+package java001_basic.answ;
 
 /*
  * num변수의 값이 10의 배수이면 1을 아니면 0을 
@@ -13,8 +13,8 @@ public class Prob01 {
 		int res;
 		
 		//여기에 작성하세요.    
-		res = num % 10 == 0 ? 1 : 0;
-		System.out.printf("res=%d",res);
+		res = num%10==0 ? 1 : 0 ;
+		System.out.println("res="+ res);
 	}
 
 }
