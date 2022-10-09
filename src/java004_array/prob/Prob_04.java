@@ -16,7 +16,15 @@ public class Prob_04 {
 		int num[] = new int[] { 3, 2, 5, 6, 1 };
 
 		// 여기를 구현하시오
-
+		int cnt = 0;
+		for(int i = 0; i < num.length; i++) {
+			while(cnt != num[i]) {
+				System.out.printf("@");
+				cnt++;
+			}
+			System.out.println();
+			cnt = 0;
+		}
 	}// end main()
 
 }// end class
