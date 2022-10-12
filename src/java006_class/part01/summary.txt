@@ -1,0 +1,90 @@
+변수 : 하나의 값을 저장하기 위한 메모리 기억공간
+int num = 3;
+int data = 4;
+
+홍길동 90 80 70
+김영희 70 80 60
+배열 : 데이터 타입이 같은 데이터를 하나로 묶어 놓은 기능
+int[][] arr = {{90, 80, 70},{70, 80, 60}};
+String[] name = {"홍길동', "김영희"};
+
+구조체 : 서로 관련이 있는 데이터를 하나로 묶어놓은 기능
+<구조체 정의>
+typeof struct person{
+	char name[10];
+	int ko;
+	int en;
+	int ma;
+	boolean gender;
+}
+
+<구조체 선언>
+person ps 
+ps.name  = {'h','o','n','g'};
+pn.ko = 70;
+pn.en = 80;
+pn.ma = 60;
+ps.gendet = false;
+
+객체 : 실세계에 존재하는 모든 사물이나 개념물
+	실세계(차, 책 등) 개념(수강, 추리)
+객체 모델링 작업 : 객체의 특징(속성)과 가능(동작)을 구분한다. (객체를 프로그램으로 구현하기 위한 분석작업)
+
+홍길동
+객체의 특징(속성) : 이름(홍길동), 나이(30), 성별(남)
+객체의 기능(동작) : 개발한다. 달린다.
+
+김영희
+객체의 특징(속성) : 이름(김영희), 나이(28), 성별(여)
+객체의 기능(동작) : 개발한다. 달린다.
+
+클래스(class) : 구조체(맴버변수) + 함수(메소드)
+				=> 객체의 공통점을 찾아내어 그 공통점을 표현하는 것, 객체의 설계도이다.
+
+class Person{
+	String name;
+	int age;
+	char gender;
+	
+	public void dev() {
+		System.out.println();
+	}
+	
+	public void run() {
+	System.out.ptintln();
+	}
+}
+
+<객체참조변수 선언>
+person ps;
+<객체 생성>
+ps = new Person();
+ps.name = '홍길동';
+ps.age = 30;
+ps.gender = '남';
+ps.dev();
+ps.run();
+
+<객체참조변수 선언>
+Person pn;
+<객체 생성>
+pn = new Person();
+pn.name = '김영희';
+pn.age = '28';
+ps.dev();
+pn.run();
+
+
+JVM 메모리구조
+1. method area : 클래스의 정보, 메소드 바이트 코드, 클래스변수, 상수
+2. stack area : 지역변수, 매개변수
+3. heap area : 클래스 객체, 배열, enum
+
+자바 프로그램의 특징
+1. 플랫폼에 독립적이다.
+2. 자동으로 메모리를 관리해준다.
+3. 네트워크와 분산환경을 지원한다.
+4. 멀리스레드를 지원한다.
+
+SmartPhone - 프로세스
+	전화통화 - 스레드 등
