@@ -16,8 +16,17 @@ public class Java074_class {
 		goods[1] = new Goods("Sony", 450000, 20, 35);
 		goods[2] = new Goods("Fujifilm", 350000, 10, 25);
 		
+//		for(int i = 0; i < goods.length; i++) {
+//			goods[i].display();
+//		}
+		
+		process(goods);
+	}
+	
+	public static void process(Goods[] goods) {
 		for(int i = 0; i < goods.length; i++) {
 			goods[i].display();
 		}
 	}
+	
 }
