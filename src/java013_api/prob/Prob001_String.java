@@ -23,16 +23,15 @@ public class Prob001_String {
              message = message.replace("**", " ");
              String[] arr = message.split(" ");
              
-             Product prod = new Product();
-             prod.setProductId(arr[0]);
-             prod.setMaker(arr[1]);
-             prod.setName(arr[2]);
-             prod.setAmount(Integer.valueOf(arr[3]));
-             prod.setPrice(Integer.valueOf(arr[4]));
-             
-             prod.toString();
-            
-		return null;
+			Product prob = new Product();
+			prob.setProductId(arr[0]);
+			prob.setMaker(arr[1]);
+			prob.setName(arr[2]);
+			prob.setAmount(Integer.parseInt(arr[3]));
+			prob.setPrice(Integer.parseInt(arr[4]));
+			
+			
+		return prob;
 	}// end creatProduct
 }// end class
 

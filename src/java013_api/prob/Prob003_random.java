@@ -37,11 +37,18 @@ public class Prob003_random {
 		// array배열에서 소수만 출력하는 프로그램을 구현하시오.
 		int cnt = 0;
 		for (int i = 0; i < array.length; i++) {
-			for(int j = 0; j < 10; j++) {
+			for(int j = 1; j <= array[i]; j++) {
 				if(array[i] % j == 0) {
-					
+					cnt++;
+				}
+				if(cnt > 2) {
+					break;
 				}
 			}
+			if(cnt==2) {
+				System.out.printf("%d ",array[i]);
+			}
+			cnt = 0;
 		}
 
 	}// end primeNumber()
