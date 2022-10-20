@@ -1,6 +1,6 @@
 package java013_api.prob;
 
-import java.util.Random;
+import java.util.Arrays;
 
 /*
  * [문제]
@@ -40,16 +40,9 @@ public class Prob002_random {
 
 	private static void printUniqueNumber(int[] array) {
 		// array배열에서 중복되지 않은 유일한 숫자만을 출력하는 프로그램을 구현하시오.
-		int cnt = 0;
-		for(int i = 0; i < array.length; i++) {
-			for(int j = 0; j < i; j++) {
-				if(array[i] != array[j]) {
-					System.out.printf("%d ", array[i]);
-					break;
-				}
-			}
-		}
-
+		int[] newArr = Arrays.stream(array).distinct().toArray();
+		for(int i = 0; i < newArr.length; i++)
+			System.out.printf("%d ", newArr[i]);
 	}// end printUniqueNumber()
 }// end Prob04
 
