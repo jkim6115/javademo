@@ -3,6 +3,7 @@ package java016_stream.prob;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 /*[문제]
  * data.txt 파일에는 PRODUCT 테이블의 컬럼 이름들이 저장되어있다. 
@@ -29,7 +30,11 @@ public class Prob002_stream {
 		// 구현하세요.
 		try(Scanner sc = new Scanner(new File(fileName))) {
 			while(sc.hasNextLine()) {
-				
+				String value = sc.nextLine().toLowerCase();
+				value = Pattern.compile("_([a-z])")
+	                    .matcher(value)
+	                    .replaceAll(m -> m.group(1).toUpperCase());
+				System.out.println(value);
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

@@ -1,10 +1,13 @@
 package java016_stream.prob;
 
 
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.LineNumberReader;
+import java.util.Scanner;
 
 /*
  * [문제] 
@@ -28,12 +31,29 @@ import java.io.LineNumberReader;
 public class Prob003_stream {
 	public static void main(String[] args) throws Exception {
 
-		search(".\\src\\java016_stream\\prob\\input.txt", "You");
+		search(".\\src\\java016_stream\\prob\\input.txt", "you");
 	}// end main()
 
 	private static void search(String inputFile, String searchWord) {
 		//여기를 구현하세요.
-		
+		int count = 0;
+		try(FileReader fr = new FileReader(inputFile);
+				BufferedReader br = new BufferedReader(fr)) {
+			String line = null;
+			while((line = br.readLine()) != null) {
+				count++;
+				String chk = line.toLowerCase();
+				if(chk.indexOf(searchWord) != -1) {
+					System.out.printf("%d line : %s\n",count,line);
+				} 
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 
 	}// end search()
 }// end class

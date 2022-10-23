@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 /*
  * [문제]
@@ -24,17 +25,23 @@ import java.io.IOException;
 public class Prob004_stream {
 	public static void main(String[] args) {
 		// 프로그램을 구현하시오.
-		File fr=new File(".\\src\\java016_stream\\prob\\jumsu.txt");
-		
-		
-		
-	}//end main()
-}//end class
+		File fr = new File(".\\src\\java016_stream\\prob\\jumsu.txt");
+		try (Scanner sc = new Scanner(fr)) {
+			int sum = 0;
+			int num = 0;
+			while (sc.hasNextLine()) {
+				String[] data = sc.nextLine().split(":");
+				System.out.printf("%s:%s\n", data[0], data[1]);
 
+				sum += Integer.parseInt(data[1]);
+				num++;
+			}
+			System.out.println("총점:"+sum);
+			System.out.println("평균:"+(double)sum / num);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-
-
-
-
-
-
+	}// end main()
+}// end class
