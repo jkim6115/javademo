@@ -2,6 +2,14 @@ package java017_collection;
 
 import java.util.Vector;
 
+/*
+ * 배열 : length
+ * 문자열 : length()
+ * 컬렉션 : size()
+ * 
+ * 제너릭 : 다운캐스팅을 생략할 수 있도록 한다.
+ */
+
 public class Java180_Vector {
 	public static void main(String[] args) {
 		Vector<String> v = new Vector<String>();
