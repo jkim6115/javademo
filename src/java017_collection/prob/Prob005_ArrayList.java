@@ -55,12 +55,12 @@ public class Prob005_ArrayList {
 	public static void prnDisplay(ArrayList<Television> aList, String channel) {
 		// channel매개변수에 해당하는 프로그램이 출력되도록 구현하시오.
 		Iterator<Television> tvn = aList.iterator();
+		System.out.printf("[%s]\n", channel);
 		while(tvn.hasNext()) {
 			Television tv = tvn.next();
-			if(tv.getChannel() == channel) {
-				System.err.println("[" + channel + "]");
+			if(tv.getChannel().equals(channel)) {
 				System.out.printf("%d %s %s %.1f\n", tv.getRank(), tv.getProgram(), tv.getChannel(), tv.getRating());
-			}
+			} 
 		}
 	}// end prnDisplay()
 
