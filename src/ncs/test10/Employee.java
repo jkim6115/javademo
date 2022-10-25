@@ -11,7 +11,6 @@ abstract public class Employee {
 	}
 
 	public Employee(String name, int number, String department, int salay) {
-		super();
 		this.name = name;
 		this.number = number;
 		this.department = department;
