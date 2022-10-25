@@ -11,7 +11,7 @@ public class BookManager {
 		int sum = 0;
 		while(bk.hasNext()) {
 			BookDTO bDTO = bk.next();
-			if(bDTO.getKind() == kind) {
+			if(bDTO.getKind().equals(kind)) {
 				sum += bDTO.getRentalPrice();
 			}
 		}
