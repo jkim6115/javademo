@@ -7,7 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 		ArrayList<Book> aList = new ArrayList<Book>();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("1:추가 2:수정 3:삭제");
+		System.out.println("1:조회 2:추가 3:수정 4:삭제 5:종료");
 		int num = sc.nextInt();
 		if(num == 1) {
 			System.out.println("추가를 선택");

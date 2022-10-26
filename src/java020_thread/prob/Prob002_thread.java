@@ -9,7 +9,7 @@ public class Prob002_thread {
 
 		t1.start();
 		
-//		t3.start();
+		
 
 		try {
 			t1.join();
@@ -20,6 +20,13 @@ public class Prob002_thread {
 		t2.start();
 		try {
 			t2.join();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		System.out.println();
+		t3.start();
+		try {
+			t3.join();
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

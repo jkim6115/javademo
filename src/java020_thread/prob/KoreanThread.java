@@ -1,10 +1,11 @@
 package java020_thread.prob;
 
 public class KoreanThread extends Thread {
-	private char[] arr = new char[] {};
+	private char[] arr = new char[] {'ㄱ','ㄴ','ㄷ','ㄹ','ㅁ','ㅂ','ㅅ','ㅇ','ㅈ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'};
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		super.run();
+		for(char ch : arr) {
+			System.out.print(ch);
+		}
 	}
 }
