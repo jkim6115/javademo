@@ -44,11 +44,6 @@ public class BookManagerImpl implements BookManager {
 		for (Book a : aList) {
 			if (a.getIsbn().equals(isbn))
 				temp = a;
-			else {
-				System.out.println("책을 찾을 수 없습니다.");
-				temp = null;
-				break;
-			}	
 		}
 		return temp;
 	}
@@ -59,11 +54,6 @@ public class BookManagerImpl implements BookManager {
 		for (Book a : aList) {
 			if (a.getTitle().contains(title))
 				temp.add(a);
-			else {
-				System.out.println("책을 찾을 수 없습니다.");
-				temp = null;
-				break;
-			}
 		}
 		return temp;
 	}
@@ -74,11 +64,6 @@ public class BookManagerImpl implements BookManager {
 		for (Book a : aList) {
 			if (a.getPublisher().equals(publisher))
 				temp.add(a);
-			else {
-				System.out.println("책을 찾을 수 없습니다.");
-				temp = null;
-				break;
-			}
 		}
 		return temp;
 	}
@@ -87,13 +72,8 @@ public class BookManagerImpl implements BookManager {
 	public ArrayList<Book> searchBookByPrice(int price) {
 		ArrayList<Book> temp = new ArrayList<>();
 		for (Book a : aList) {
-			if (a.getPrice() < price) {
+			if (a.getPrice() < price)
 				temp.add(a);
-			} else {
-				System.out.println("책을 찾을 수 없습니다.");
-				temp = null;
-				break;
-			}
 		}
 		return temp;
 	}
