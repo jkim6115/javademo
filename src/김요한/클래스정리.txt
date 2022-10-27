@@ -1,0 +1,39 @@
+구현 클래스 설명
+Package 명 : Java022
+
+클래스명 : Main
++main(String args[]) : void		//main
+
+클래스명 : PrintBooks
++PrintBooks(bs:ArrayList<Book>)
+
+클래스명 : Book
+-isbn:String
+-title:String
+-author:String
+-publisher:String
+-price:int
+-desc:String
+-------------------------------
++Book()
++Book(isbn:String, title:String, author:String, publisher:String, price:int, desc:String)
++toString():String
++setXXX()
++getXXX()
+
+인터페이스명 : BookManager
++addBook(nBook:Book):void
++readAllBook():ArrayList<Book>
++searchBookByIsbn(isbn:String):Book
++searchBookByTitle(title:String):ArrayList<Book>
++searchBookByPublisher(publisher:String):ArrayList<Book>
++searchBookByPrice(price:int):ArrayList<Book>
++getTotalPrice():int
++getAvgPrice():int
+
+클래스명 : BookManagerImpl		//implement BookManager
+-aList:ArrayList<Book>
+----------------------------------------------------------
+-mg():BookManagerImpl		//static
++BookManagerImpl()
++getInstance():BookManagerImpl	//static
